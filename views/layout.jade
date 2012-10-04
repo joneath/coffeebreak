@@ -3,5 +3,17 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/javascripts/vendor/jquery.js")
+    script(src="/javascripts/vendor/underscore.js")
+    script(src="/javascripts/vendor/backbone.js")
+    script(src="/javascripts/vendor/handlebars.js")
+    script(src="/javascripts/vendor/stalky.js")
+    script(src="/javascripts/vendor/spin.js")
+    script(src="/javascripts/vendor/mousewheel.js")
+    script(src="/javascripts/helpers.js")
+    script(src="/javascripts/templates.js")
+    script(src="/javascripts/vendor/require.js", data-main="/javascripts/app/main.js")
+    script(src="//use.typekit.net/qnz5whq.js")
+    script try{Typekit.load();}catch(e){}
   body
     block content

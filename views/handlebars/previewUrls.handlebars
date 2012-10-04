@@ -1,0 +1,30 @@
+{{#each urls}}
+  <div class="preview-url invisible" data-cid="{{cid}}">
+    <div class="preview-context">
+      <h1 class="preview-url-title">{{title}}</h1>
+      <div class="preview-topic" style="color: {{categoryTextColor}}; background-color: {{categoryColor}};">
+        <h2>{{categoryName}}</h2>
+        <ul class="preview-controls hidden">
+          <li class="control control-like"></li>
+          <li class="control control-add-list"></li>
+          <li class="control control-share"></li>
+          <li class="control control-comment"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="preview-push" style="background: url({{thumbs.main.url}}) no-repeat center center;"></div>
+    {{#if description}}
+    <div class="preview-body">
+      <p>{{description}}</p>
+    </div>
+    {{else}}
+    <div class="preview-extra-thumbs">
+      {{{extraThumbs thumbs.extras}}}
+    </div>
+    {{/if}}
+    <div class="preview-thumbs-wrap">
+      <img class="preview-thumb" src="{{{thumbs.main.url}}}">
+      <div class="preview-thumb-shadow"></div>
+    </div>
+  </div>
+{{/each}}

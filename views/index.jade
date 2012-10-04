@@ -1,5 +1,23 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .stumble-preview-wrap
+    #stumble-nav-wrap.stumble-nav-wrap
+      #stumble-nav.stumble-nav
+        #stumble-nav-simple.stumble-nav-simple
+          .stumble-button-wrap
+            #stumble-bottom.stumble-button
+          ul
+            li
+              a(href="#") All
+            li
+              a(href="#") Trending
+            li
+              a(href="#") Lists
+            li
+              a(href="#") More
+        #stumble-mode.stumble-mode
+          h2 Stumbling All Interests
+    #stumble-preview.stumble-preview
+  #stumble-content.stumble-content
+    .stumble-frame-layer

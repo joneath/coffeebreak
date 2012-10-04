@@ -5,7 +5,6 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
 
@@ -27,10 +26,16 @@ app.configure(function(){
 
 app.configure('development', function(){
   app.use(express.errorHandler());
+  var hbsPrecompiler = require('handlebars-precompiler');
+    hbsPrecompiler.watchDir(
+      __dirname + "/views/handlebars",
+      __dirname + "/public/javascripts/templates.js",
+      ['handlebars', 'hbs']
+    );
 });
 
 app.get('/', routes.index);
-app.get('/users', user.list);
+app.get('/stumble/*', routes.index);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
