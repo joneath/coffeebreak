@@ -90,7 +90,7 @@ define(function(require) {
       if (this.previewShown) {
         this.previewShown = false;
         $("body").removeClass("preview-shown");
-        $("html, body").animate({ scrollTop: 388 }, 300);
+        $("html, body").animate({ scrollTop: 460 }, 300);
         mediator.trigger("preview:hidden");
       }
     },
